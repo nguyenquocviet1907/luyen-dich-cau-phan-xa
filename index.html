@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luyện Dịch Câu Phản Xạ (A2–B1)</title>
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+<header>
+  <h1>🔄 Luyện Dịch Câu Phản Xạ <span class="lv">A2–B1</span></h1>
+  <div id="score">⭐ 0 điểm · 📝 0 câu</div>
+</header>
+
+<nav class="tabs">
+  <button id="tabTopic" class="tab active">📚 Chủ đề</button>
+  <button id="tabCustom" class="tab">✏️ Tự dán câu</button>
+  <button id="tabBook" class="tab">⭐ Sổ tay của tôi</button>
+</nav>
+
+<main>
+<!-- ===== TAB: CHỦ ĐỀ ===== -->
+<section id="viewTopic">
+  <div class="topic-bar">
+    <button id="topicDaily" class="topic-btn active">🏠 Đời sống</button>
+    <button id="topicWork" class="topic-btn">💼 Công sở</button>
+  </div>
+  <div class="card">
+    <div class="q-head"><span id="qSub" class="q-sub"></span><span id="qCount" class="q-count"></span></div>
+    <p class="q-vi-label">Dịch câu sau sang tiếng Anh:</p>
+    <p id="qVi" class="q-vi"></p>
+    <textarea id="answer" rows="3" placeholder="Gõ bản dịch tiếng Anh của bạn vào đây… (Ctrl + Enter để nộp)"></textarea>
+    <div class="btn-row">
+      <button id="btnHints" class="btn ghost">💡 Gợi ý từ vựng <kbd>Tab</kbd></button>
+      <button id="btnSubmit" class="btn primary">Nộp bài <kbd>Ctrl+Enter</kbd></button>
+    </div>
+  </div>
+  <div id="feedback" class="feedback" hidden></div>
+</section>
+
+<!-- ===== TAB: TỰ DÁN CÂU ===== -->
+<section id="viewCustom" hidden>
+  <div class="card">
+    <p class="q-vi-label">Bước 1 — Dán câu tiếng Việt bạn muốn luyện:</p>
+    <textarea id="customVi" rows="2" placeholder="VD: Tôi muốn xin nghỉ phép hai ngày vào tuần tới…"></textarea>
+    <div class="btn-row"><button id="btnCustomHints" class="btn ghost">🔍 Tạo gợi ý từ vựng</button></div>
+    <div id="customHintBody" class="hint-inline"><p class="empty">Dán câu tiếng Việt vào ô trên rồi bấm "Tạo gợi ý".</p></div>
+    <p class="q-vi-label">Bước 2 — Gõ bản dịch tiếng Anh của bạn:</p>
+    <textarea id="customEn" rows="3" placeholder="Gõ bản dịch… (Ctrl + Enter để nộp)"></textarea>
+    <div class="btn-row"><button id="btnCustomSubmit" class="btn primary">Nộp bài <kbd>Ctrl+Enter</kbd></button></div>
+  </div>
+  <div id="feedbackCustom" class="feedback" hidden></div>
+</section>
+
+<!-- ===== TAB: SỔ TAY ===== -->
+<section id="viewBook" hidden>
+  <div class="card">
+    <h3>⭐ Sổ tay cụm từ của tôi</h3>
+    <p class="muted">Các collocation bạn bấm ★ sẽ nằm ở đây để ôn lại. Bấm 🔊 để nghe phát âm.</p>
+    <div id="bookList"></div>
+  </div>
+</section>
+</main>
+
+<!-- ===== DRAWER GỢI Ý ===== -->
+<aside id="drawer">
+  <div class="drawer-head"><h3>💡 Gợi ý từ vựng</h3><button id="drawerClose">✕</button></div>
+  <div id="hintBody"></div>
+</aside>
+
+<footer><p>Mẹo: <kbd>Tab</kbd> mở/đóng gợi ý · <kbd>Ctrl</kbd>+<kbd>Enter</kbd> nộp bài · <kbd>Esc</kbd> đóng bảng</p></footer>
+
+<script src="data.js?v=2"></script>
+<script src="data_gen1.js?v=1"></script>
+<script src="data_gen2.js?v=1"></script>
+<script src="data_gen3.js?v=1"></script>
+<script src="data_gen4.js?v=1"></script>
+<script src="data_gen5.js?v=1"></script>
+<script src="data_gen6.js?v=1"></script>
+<script src="app.js?v=2"></script>
+</body>
+</html>
